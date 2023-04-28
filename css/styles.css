@@ -1,6 +1,10 @@
+* {
+    font-family: Montserrat;
+}
+
 body {
     display: block;
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(225, 224, 224);
     text-align: center;
     margin-left: 0;
 }
@@ -11,6 +15,11 @@ div img {
 
 section img {
     width: 90%;
+    min-width: 250px;
+}
+
+section h3 {
+    margin-bottom: 0;
 }
 
 h1 {
@@ -27,11 +36,28 @@ a {
     text-decoration: none;
 }
 
-ul {
+img {
+    border-radius: 10px;
+}
+
+#portfolio {
+    background-color: white;
+    margin-left: 1em;
+    margin-right: 0.5em;
+    min-width: 270px;
+}
+
+.nav-bar {
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    margin: 1em 1em 1em -1em;
+    padding-inline-start: 1.5em;
+    padding-inline-end: 1em;
+}
+
+.nav-bar h3 {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
 }
 
 ul li {
@@ -39,15 +65,24 @@ ul li {
     text-align: center;
     height: auto;
     margin-top: 1em;
+    min-width: 125px;
+    border-radius: 50px;
+}
+
+#portrait {
+    min-width: 200px;
+}
+
+.portfolio-title {
+    margin-bottom: 2em;
 }
 
 section {
     margin-bottom: 10%;
 }
 
-.portfolio {
-    margin-top: 15%;
-    margin-bottom: 15%;
+.introduction {
+    margin:3em;
 }
 
 .contact {
@@ -68,4 +103,41 @@ hr {
     margin-left: .5em;
 }
 
-/* ---- Media Queries ---- */
+/* ------------------------ 
+        Media Queries 
+------------------------- */
+
+@media (min-width: 769px) {
+
+    /* ----- START NAVBAR + INTRO CODE------ */
+
+    .nav-bar {
+        display: inline-flex;
+        width: 500px;
+        margin: 0;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+    }
+    .nav-bar h3 {
+        margin: 0.75em 1.5em 0.75em 1.5em;
+    }
+    .introduction {
+        display: flex;
+        margin-right: .5em
+    }
+    #intro-para {
+        padding: 0 1em 0 1em;
+    }
+    /* ----- END NAVBAR + INTRO CODE ------ */
+
+    /* ----- START PORTFOLIO CODE ------ */
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1024px) {
+
+}
