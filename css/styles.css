@@ -1,14 +1,71 @@
-.menu {
-    display: flex;
-    flex-direction: column;
+body {
+    display: block;
+    background-color: rgb(250, 250, 250);
+    text-align: center;
+    margin-left: 0;
+}
+
+div img {
+    width: 75%;
+}
+
+section img {
+    width: 90%;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    display: inline-block;
+    text-align: center;
+    width: 80%
+}
+
+a {
+    text-decoration: none;
 }
 
 ul {
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
+    margin: 1em 1em 1em -1em;
+}
+
+ul li {
+    background-color: white;
+    text-align: center;
+    height: auto;
+    margin-top: 1em;
+}
+
+section {
+    margin-bottom: 10%;
+}
+
+.portfolio {
+    margin-top: 15%;
+    margin-bottom: 15%;
 }
 
 .contact {
-    display: flex;
+    display: inline-block;
     flex-direction: column;
+    text-align: center;
 }
+
+footer {
+    display: flex;
+    height: 1em;
+    padding: 0 1em 0 1em;
+    margin-bottom: 3em;
+    justify-content: space-between;
+}
+
+hr {
+    margin-left: .5em;
+}
+
 /* ---- Media Queries ---- */
