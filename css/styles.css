@@ -4,13 +4,9 @@
 
 body {
     display: block;
-    background-color: rgb(225, 224, 224);
+    background-color: rgb(246, 244, 244);
     text-align: center;
     margin-left: 0;
-}
-
-div img {
-    width: 75%;
 }
 
 section img {
@@ -29,15 +25,11 @@ h1 {
 p {
     display: inline-block;
     text-align: center;
-    width: 80%
+    width: 80%;
 }
 
 a {
     text-decoration: none;
-}
-
-img {
-    border-radius: 10px;
 }
 
 #portfolio {
@@ -66,14 +58,14 @@ ul li {
     height: auto;
     margin-top: 1em;
     min-width: 125px;
-    border-radius: 50px;
 }
 
 #portrait {
     min-width: 200px;
 }
 
-.portfolio-title {
+#portfolio-title {
+    width: 100%;
     margin-bottom: 2em;
 }
 
@@ -82,7 +74,7 @@ section {
 }
 
 .introduction {
-    margin:3em;
+    margin: 2em .5em 2em .5em;
 }
 
 .contact {
@@ -109,7 +101,7 @@ hr {
 
 @media (min-width: 769px) {
 
-    /* ----- START NAVBAR + INTRO CODE------ */
+    /* ----- START 769px CODE------ */
 
     .nav-bar {
         display: inline-flex;
@@ -119,25 +111,70 @@ hr {
         justify-content: space-evenly;
 
     }
+
     .nav-bar h3 {
         margin: 0.75em 1.5em 0.75em 1.5em;
     }
+
     .introduction {
         display: flex;
-        margin-right: .5em
+        margin: 2em .5em 2em .5em;
     }
+
     #intro-para {
         padding: 0 1em 0 1em;
+        margin-top: 0;
+        text-align: left;
     }
-    /* ----- END NAVBAR + INTRO CODE ------ */
 
-    /* ----- START PORTFOLIO CODE ------ */
-    .portfolio {
+  #portfolio {   /* Container for Portfolio Flexbox */
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
+
+    #portfolio-title {
+        flex-basis: 100%;
+        margin: 2em;
+    }
+
+    .marketing-page,
+    .search-page,
+    .travel-app,
+    .favorite-spots,
+    .photo-gallery,
+    .calculator {
+        flex-basis: 50%;
+    }
+
 }
+    /* ----- END 769px CODE ------ */
+
+    /* ----- START 1024px CODE ------ */
 
 @media (min-width: 1024px) {
 
+    .main-header {
+        display: flex;
+        margin-left: 2em;
+        justify-content: space-between;
+    }
+
+    .name {
+        justify-content: start;
+    }
+
+    .nav-bar {
+        justify-content: end;
+    }
+
+    .marketing-page,
+    .search-page,
+    .travel-app,
+    .favorite-spots,
+    .photo-gallery,
+    .calculator {
+        flex-basis: 33.33%;
+    }
 }
+
+    /* ----- END 1024px CODE ------ */
