@@ -3,7 +3,7 @@
     color: white;
 }
 #student-name {
-    font-family: Kristi;
+    font-family: Whisper;
     font-size: 50px;
     font-weight: lighter;
     color: aliceblue;
@@ -63,7 +63,7 @@ li:hover {
 #intro img {
     min-width: 150px;
     flex-basis: 30vw;
-    border-radius: 15%;
+    border-radius: 8%;
 }
 #intro-paragraph {
     text-align: center;
@@ -118,9 +118,9 @@ hr {
     margin-left: .5em;
 }
 
-/*================== MEDIA QUERY for 769 pixels ==================*/
+/*================== MEDIA QUERY for 768 pixels ==================*/
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 
     .nav-bar { 
         flex-direction: row;
