@@ -36,6 +36,7 @@ body {
     background-color: rgb(136, 135, 135);
     background-blend-mode: multiply;
     justify-content: center;
+    max-width: 1200px;
 }
 #student-name {
     text-align: center;
@@ -62,6 +63,7 @@ li:hover {
     margin: 2em;
 }
 #intro img {
+    max-width: 100%;
     min-width: 150px;
     flex-basis: 30vw;
     border-radius: 8%;
@@ -108,11 +110,15 @@ li:hover {
 .contact p {
     margin: 2em;
 }
-footer {
+#footernav-big {
     display: flex;
+    display: none;
+}
+#footernav-small {
+    display: flex;
+    flex-direction: row;
     height: 1em;
-    padding: 0 1em 0 1em;
-    margin-bottom: 3em;
+    margin: 0 2em 2em 1em;
     justify-content: space-between;
 }
 hr {
@@ -159,6 +165,32 @@ hr {
     .description {
         width: 80%;
     }
+    #footernav-small {
+        display: none;
+    }
+    #footernav-big,
+    #footernav-bar,
+    #footerstudent-name {
+        display: flex;
+    }
+    
+    #footernav-big {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #footernav-bar {
+        list-style-type: none;
+        margin: 0;
+    }
+    #footerstudent-name { 
+        align-items: center;
+        margin: 0 0 0 1em;
+    }
+    #footernav-bar h4 {  /*--- footer nav items ---*/
+        margin: 0 .5em 0 .5em;
+    }
+
 }
 
 /*================== MEDIA QUERY for 1024 pixels ==================*/
@@ -193,4 +225,5 @@ hr {
     .topic {
         flex-basis: 33.33%;
     }
+
 }
