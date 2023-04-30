@@ -2,69 +2,95 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Montserrat">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styles.css">
-        <title>Techdegree Project 2</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Kristi">
+        <title>Document</title>
     </head>
 
-    <body>
-        <header class="main-header">
-            <h1 class="name" id="home">Christopher Laynes</h1>
-                <ul class="nav-bar">    
-                    <li id="home-link"><a href="#home"><h3>HOME</h3></a></li>
-                    <li id="portfolio-link"><a href="#portfolio"><h3>PORTFOLIO</h3></a></li>
-                    <li id="contact-link"><a href="#contact"><h3>CONTACT</h3></a></li>
-                </ul>
-        </header>
+    <body>   <!---- START BODY OF PAGE ---->
+        <nav class="heading">
+            <h1 id="student-name">Christopher Laynes</h1>
+            <ul class="nav-bar">
+                <li><a href="#student-name"><h3 class="nav-item">HOME</h3></a></li>
+                <li><a href="#portfolio"><h3 class="nav-item">PORTFOLIO</h3></a></li>
+                <li><a href="#skills"><h3 class="nav-item">SKILLS</h3></a></li>
+                <li><a href="#contact"><h3 class="nav-item">CONTACT</h3></a></li>
+            </ul>
+        </nav>
 
-        <div class="introduction">
-            <img id="portrait" style="order: 2" src="images/responsive-layout-profile.png" alt="Self portrait">
-            <p id="intro-para" style="order: 1">Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use!</p>
-        </div>
+        <section id="intro">   <!---- Introduction ---->
+            <img id="profile-picture" src="images/chrisl.jpg" alt="Self portrait">
+            <p id="intro-paragraph">Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use! I will continue to improve my skills with another Techdegree, while also continuing my Bachelor of Science in Computer Technology, with a concentration in Web Design. Experience will also be a major part of my education.</p>
+        </section>
 
-        <div id="portfolio"><br>
+        <section id="portfolio">
+
             <h3 id="portfolio-title">PORTFOLIO</h3>
 
-            <section class="marketing-page">
+            <section class="marketing-page topic">
                 <img src="images/portfolio-1.png" alt="Marketing Image">
-                <h3>Marketing Page</h3>
-                <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.</p>
+                <h3 class="title">Marketing Page</h3>
+                <p class="description">This project shows the front page of a marketing website meant for a specific business I'm interested in.</p>
             </section>
-
-            <section class="search-page">
-                <img src="images/portfolio-2.png" alt="Search image">
-                <h3>Search Page</h3>
-                <p>This project searches through a specific database to find information that the user is trying to look up.</p>
+ 
+            <section class="search-page topic">
+                <img src="images/portfolio-2.png" alt="Travel image">
+                <h3 class="title">Search Page</h3>
+                <p class="description">This project compares travel times based on different transportation methods and tells you the best one.</p>
             </section>
-
-            <section class="travel-app">
+             
+            <section class="travel-app topic">
                 <img src="images/portfolio-3.png" alt="Travel image">
-                <h3>Travel App</h3>
-                <p>This project compares travel times based on different transportation methods and tells you the best one.</p>
+                <h3 class="title">Travel App</h3>
+                <p class="description">This project compares travel times based on different transportation methods and tells you the best one.</p>
             </section>
 
-            <section class="favorite-spots">
+            <section class="favorite-spots topic">
                 <img src="images/portfolio-4.png" alt="Images of favorite spots">
-                <h3>Map of Favorite Spots</h3>
-                <p>This project uses mapping apis to plot points for my favorite spots in the city for a do-it-yourself walking tour.</p>
+                <h3 class="title">Map of Favorite Spots</h3>
+                <p class="description">This project uses mapping apis to plot points for my favorite spots in the city for a do-it-yourself walking tour.</p>
             </section>
 
-            <section class="photo-gallery">
+            <section class="photo-gallery topic">
                 <img src="images/portfolio-5.png" alt="Image of photo gallery">
-                <h3>Photo Gallery</h3>
-                <p>This project shows pictures from a recent trip to the viewer and allows them to easily navigate through photos.</p>
+                <h3 class="title">Photo Gallery</h3>
+                <p class="description">This project shows pictures from a recent trip to the viewer and allows them to easily navigate through photos.</p>
             </section>
 
-            <section class="calculator">
+            <section class="calculator topic">
                 <img src="images/portfolio-6.png" alt="Image of calculator">
-                <h3>Calculator</h3>
-                <p>Someone can enter in the numbers they want, and press the big blue button and get the result.</p>
+                <h3 class="title">Calculator</h3>
+                <p class="description">Someone can enter in the numbers they want, and press the big blue button and get the result.</p>
             </section>
-        </div>
+
+        </section>
+        <br>
+        <section id="skills">
+
+            <h3 id="skills-title">SKILLS</h3>
+
+            <section class="html-page topic">
+                <img src="images/portfolio-1.png" alt="Marketing Image">
+                <h3 class="title">Web Development</h3>
+                <p class="description">This page will tell the story of my journey to become a web developer, where I currently stand, and where I hope to see myself in the future. </p>
+            </section>
+ 
+            <section class="css-page topic">
+                <img src="images/portfolio-2.png" alt="Travel image">
+                <h3 class="title">Computer Hardware</h3>
+                <p class="description">When my father brought home the family's very first personal computer in 1994, I was so amazed by the machine that I took it apart into pieces to examine how it worked, with no experience, at thirteen years old. This began my passion for computers. </p>
+            </section>
+             
+            <section class="javascript-page topic">
+                <img src="images/portfolio-3.png" alt="Travel image">
+                <h3 class="title">Photography</h3>
+                <p class="description">Photography is another passion of mine that began when I was young. Doing my own photography will allow me to create my web designs with my own personalized work.</p>
+            </section>
+
+        </section>
 
         <section class="contact" id="contact">
             <h4><b>CONTACT</b></h4>
@@ -75,8 +101,9 @@
             <hr>
         <footer>
             <h4>Christopher Laynes</h4>
-            <h4><a href="#home">BACK TO TOP</a></h4>
+            <h4><a href="#student-name">BACK TO TOP</a></h4>
         </footer>
-    </body>
+
+    </body>   <!---- END BODY OF PAGE ---->
 
 </html>

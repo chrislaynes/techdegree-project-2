@@ -1,88 +1,112 @@
-* {
-    font-family: Montserrat;
+* {       /*===== Universally Sets Font ======*/
+    font-family: Montserrat, serif;
+    color: white;
 }
-
-body {
-    display: block;
-    background-color: rgb(246, 244, 244);
-    text-align: center;
-    margin-left: 0;
+#student-name {
+    font-family: Kristi;
+    font-size: 50px;
+    font-weight: lighter;
+    color: aliceblue;
+    margin: 0 0 0 0;
 }
-
-section img {
-    width: 90%;
-    min-width: 250px;
+a {        
+    text-decoration: none; /*===== Removes Underline from Links ======*/
 }
-
-section h3 {
-    margin-bottom: 0;
+html {
+    justify-content: center;
+    margin: 0;
 }
-
-h1 {
-    text-align: center;
-}
-
-p {
-    display: inline-block;
-    text-align: center;
-    width: 80%;
-}
-
-a {
-    text-decoration: none;
-}
-
-#portfolio {
-    background-color: white;
-    margin-left: 1em;
-    margin-right: 0.5em;
-    min-width: 270px;
-}
-
-.nav-bar {
+body,
+html,
+#intro,
+.topic,
+#skills,
+.nav-bar,
+#intro img,
+#portfolio,
+.topic img,
+.topic .description {        /*===== Declare Flex Containers ======*/
     display: flex;
+}
+body {
     flex-direction: column;
-    list-style-type: none;
-    padding-inline-start: 1.5em;
-    padding-inline-end: 1em;
+    background-image: url("../images/webdev.jpg");
+    background-position:initial;
+    background-size: contain;
+    background-color: rgb(136, 135, 135);
+    background-blend-mode: multiply;
+    justify-content: center;
 }
-
-.nav-bar h3 {
-    margin-top: 0.75em;
-    margin-bottom: 0.75em;
-}
-
-ul li {
-    background-color: white;
+#student-name {
     text-align: center;
-    height: auto;
-    margin-top: 1em;
-    min-width: 125px;
 }
-
-#portrait {
-    min-width: 200px;
+.nav-bar {       /*===== Menu Bar ======*/
+    flex-direction: column;
+    padding-left: 0;
+    text-align: center;
+    list-style-type: none;
 }
-
-#portfolio-title {
-    width: 100%;
-    margin-bottom: 2em;
+.nav-item {       /*===== Menu Bar Links ======*/
+    margin: .5em;
+    padding: .5em;
+    border-radius: 20px;
+    background-color:rgba(84, 84, 84, 0.353);
 }
-
-section {
-    margin-bottom: 10%;
+li:hover {
+    transform: scale(1.25) perspective(1px)
+  }
+#intro {
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
 }
-
-.introduction {
-    margin: 2em .5em 2em .5em;
+#intro img {
+    min-width: 150px;
+    flex-basis: 30vw;
+    border-radius: 15%;
 }
-
+#intro-paragraph {
+    text-align: center;
+}
+#portfolio,
+#skills {
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.550);
+    flex-basis: auto;
+}
+#portfolio-title,
+#skills-title,
+.title,
+.description {
+    color: black;
+}
+.topic {
+    flex-direction: column;
+    align-items: center;
+}
+.topic img {
+    width: 90vw;
+}
+.description {
+    width: 80vw;
+}
+.description {
+    margin-top: 0;
+    margin-bottom: 3em;
+}
+.topic img {
+    width: 90%;
+    min-width: 150px;
+}
 .contact {
     display: inline-block;
     flex-direction: column;
     text-align: center;
 }
-
+.contact p {
+    margin: 2em;
+}
 footer {
     display: flex;
     height: 1em;
@@ -90,91 +114,82 @@ footer {
     margin-bottom: 3em;
     justify-content: space-between;
 }
-
 hr {
     margin-left: .5em;
 }
 
-/* ------------------------ 
-        Media Queries 
-------------------------- */
+/*================== MEDIA QUERY for 769 pixels ==================*/
 
 @media (min-width: 769px) {
 
-    /* ----- START 769px CODE------ */
-
-    .nav-bar {
-        display: inline-flex;
-        width: 500px;
-        margin: 0;
+    .nav-bar { 
         flex-direction: row;
-        justify-content: space-evenly;
-
+        justify-content: center; 
     }
-
-    .nav-bar h3 {
-        margin: 0.75em 1.5em 0.75em 1.5em;
+    #intro {
+        flex-direction: row;
+        justify-content: left;
+        align-items: start;
     }
-
-    .introduction {
-        display: flex;
-        margin: 2em .5em 2em .5em;
+    #intro img {
+        margin-left: 1em;
+        flex: 1;
+        order: 2;
     }
-
-    #intro-para {
-        padding: 0 1em 0 1em;
+    #intro p {
         margin-top: 0;
         text-align: left;
+        flex: 1.5;
+        order: 1;
     }
-
-  #portfolio {   /* Container for Portfolio Flexbox */
-        display: flex;
+    #portfolio-title,
+    #skills-title {
+        flex-basis: 100%;
+    }
+    #portfolio,
+    #skills {
+        flex-direction: row;
+        flex-basis: 100vw;
         flex-wrap: wrap;
     }
-
-    #portfolio-title {
-        flex-basis: 100%;
-        margin: 2em;
-    }
-
-    .marketing-page,
-    .search-page,
-    .travel-app,
-    .favorite-spots,
-    .photo-gallery,
-    .calculator {
+    .topic {
         flex-basis: 50%;
     }
-
+    .description {
+        width: 80%;
+    }
 }
-    /* ----- END 769px CODE ------ */
 
-    /* ----- START 1024px CODE ------ */
+/*================== MEDIA QUERY for 1024 pixels ==================*/
 
 @media (min-width: 1024px) {
 
-    .main-header {
+    .heading {
         display: flex;
-        margin-left: 2em;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 1.5em 0 2em;
+    }
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
     }
-
-    .name {
-        justify-content: start;
+    #portfolio,
+     #skills {
+        flex-direction: row;
+        flex-basis: auto;
+        flex-wrap: wrap;
     }
-
-    .nav-bar {
-        justify-content: end;
+    #portfolio-title,
+    #skills-title {
+        flex-basis: 100%;
     }
-
-    .marketing-page,
-    .search-page,
-    .travel-app,
-    .favorite-spots,
-    .photo-gallery,
-    .calculator {
+    #portfolio h3 {
+        margin: 2em;
+    }
+    .topic {
         flex-basis: 33.33%;
     }
 }
-
-    /* ----- END 1024px CODE ------ */
